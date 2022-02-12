@@ -96,3 +96,11 @@
         }
     }
 }
+
+/* bar */
+@media only screen and (max-width: 1085px) {
+    .on-bar {
+        right: 0 !important;
+        transition: right 1.2s;
+    }
+}

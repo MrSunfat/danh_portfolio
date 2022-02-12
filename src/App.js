@@ -1,10 +1,12 @@
 import React from 'react';
-import { Home, About, Projects, Contact, Footer } from './components';
+import { Home, About, Projects, Contact, Footer, Bar } from './components';
 
 function App() {
     return (
         <div className="App">
-            <div className="toastify"></div>
+            <div className="bar on-bar">
+                <Bar />
+            </div>
             <div className="portfolio-container">
                 <Home />
                 <About />

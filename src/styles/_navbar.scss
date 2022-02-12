@@ -1,0 +1,47 @@
+@import './variable';
+@import './mixin';
+
+.bar {
+    background-color: $main-bg-color;
+    position: fixed;
+    top: calc(50% + -70px);
+    /* left: 0; */
+    width: $width-bar;
+    right: $off-bar;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 0 0 12px $crollbar-color;
+    overflow: hidden;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include resetUL;
+        margin: 6px 0;
+
+        .bar__item {
+            // width: 100%;
+            &__link {
+                @include resetA;
+                color: $highlight-color;
+                background-color: #fff;
+                text-align: center;
+                margin: 3px;
+                border: 1px solid $tag-text-color;
+                border-radius: 50%;
+                
+                .icon {
+                    transform: translate(calc(-50% + 8px), calc(-50% + 7px));
+                    font-size: 17px;
+                }
+            }
+        }
+
+        .bar__item:hover .bar__item__link {
+            color: $text-color;
+            background-color: $highlight-color;
+        }
+    }
+}
