@@ -1,0 +1,89 @@
+@import './variable';
+@import './mixin';
+
+.projects-container {
+
+}
+
+.projects {
+    &__main {
+        // flex-direction: row;
+        
+        &__items {
+            display: flex;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        /* Project Item */
+        &__item {
+            @include resetUL;
+            margin: 0 12px;
+            padding: 3px;
+
+            .item__img {
+                max-width: 400px;
+                height: 220px;
+                img {
+                    display: block;
+                    width: 100%;
+                }
+                border: 1px solid $line-color;
+                border-radius: 5px;
+                overflow: hidden
+            }
+
+            .item__name {
+                text-align: center;
+                @include textStyle($text-on-light-theme, 700, 17px);
+                margin: 12px 0;
+            }
+
+            .item__skills {
+                @include flexStyle;
+                justify-content: center;
+                @include resetUL;
+                margin-bottom: 12px;
+                flex-wrap: wrap;
+
+                .item__skill {
+                    padding: 0;
+                    text-align: center;
+                    color: $tag-text-color;
+                    background-color: $highlight-color;
+                    border: none;
+                    border-radius: 15px; 
+                    padding: 2px 8px;
+                    margin: 1px 2px 0 0;
+                }
+            }
+
+            .item__links {
+                @include resetUL;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 12px;
+
+                .item__link {
+                    &__sc, &__if {
+                        @include resetA;
+                        @include textStyle($main-bg-color, 700, 17px);
+                        @include flexStyle;
+                        border: 1px solid $main-bg-color;
+                        &__icon {
+                            margin-right: 3px;
+                        }
+                    }
+
+                    &__sc:hover, &__if:hover {
+                        @include btnHoverDF;
+                    }
+                }
+
+                .item__link:first-child {
+                    margin-right: 10px;
+
+                }
+            }
+        }
+    }
+}

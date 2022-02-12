@@ -1,0 +1,65 @@
+@import './variable';
+@import './mixin';
+
+.about {
+    /* heading */
+    // &__heading {
+    //     @include flexCol;
+    //     justify-content: center;
+    //     .title {
+    //         @include textStyle($bolder-text-on-light-theme, 700, 32px);
+    //         // height: 24px;
+    //         margin-bottom: 10px;
+    //     }
+    // }
+
+    /* main */
+    &__main {
+        @include flexCol;
+        
+        .about__row {
+            padding: $pad-or-margin-title 20px;
+            
+            border-radius: 8px;
+            overflow: hidden;
+
+            .about__col {
+                
+            }
+        }
+
+        &__heading {
+            text-align: center;
+            margin-bottom: $pad-or-margin-title;
+            @include textStyle($highlight-color, 700, 20px);
+        }
+
+        &__skills {
+            @include resetUL;
+            @include textStyle($bolder-text-on-light-theme, 400, 17px);
+        
+            .skill {
+                display: flex;
+                align-items: center;
+                &__icon {
+                    color: $main-bg-color;
+                    margin-right: $margin-right-of-icon;
+                }
+            }
+        }
+    }
+
+    &__cv {
+        margin-top: $margin-top-item-of-about;
+        .cv-btn {
+            @include textStyle($main-bg-color, 500, 17px);
+            border: 2px solid $main-bg-color;
+            background-color: $bg-light;
+        }
+        .cv-btn:hover {
+            color: $text-color;
+            background-color: $main-bg-color;
+            transition: all 1.2s;
+        }
+    }
+}

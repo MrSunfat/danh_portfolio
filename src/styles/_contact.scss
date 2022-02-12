@@ -1,0 +1,24 @@
+@import './variable';
+@import './mixin';
+
+.contact__info {
+
+    &__list {
+        display: flex;
+        @include resetUL;
+    }
+    
+    &__item {
+        a { 
+            @include resetA;
+            @include textStyle($bolder-text-on-light-theme, 400, 20px);
+            @include flexStyle;
+            .icon {
+                @include textStyle($main-bg-color, 400, 24px);
+                margin-right: 6px;
+
+            }
+        }
+        box-shadow: 0 1px 0 0 $line-color;
+    }
+}

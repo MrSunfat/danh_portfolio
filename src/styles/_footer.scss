@@ -1,0 +1,12 @@
+@import './variable';
+@import './mixin';
+
+.footer {
+    height: $footer-height;
+    background-color: $main-bg-color;
+    @include flexCol;
+    text-align: center;
+    justify-content: center;
+    @include textStyle($text-color, 400, 17px);
+    letter-spacing: 2px;
+}

@@ -1,0 +1,103 @@
+@import './variable';
+@import './mixin';
+
+.home-container {
+    // @include flexStyle;
+    // flex-direction: column;
+    
+    /* Header */
+    .header-container {
+        position: fixed;
+        top: 0;
+        color: $text-color;
+        width: 100%;
+        background-color: $main-bg-color;
+        z-index: 2;
+    }
+
+    .header {
+        @include flexStyle;
+        height: $header-height;
+        justify-content: space-around;
+        
+        &__navbar {
+            // width: 100%;
+        }
+    
+        &__logo {
+            a {
+                @include flexStyle;
+                justify-content: center;
+                @include aStyle(48px, 800, $logo-color);
+                letter-spacing: 3px;
+            }
+        }
+
+        &__options {
+            @include resetUL;
+            @include flexStyle;
+            justify-content: space-between;
+            align-items: center;
+            
+            .header__option {
+                height: 100%;
+                
+                a {
+                    @include aStyle(17px, 600, $text-color);
+                    padding: 0 25px;
+                }
+                .select-option {
+                    color: $highlight-color;
+                    transition: color 1.2s;
+                }
+            }
+        }
+    }
+
+    /* Profile */
+    .profile-container {
+        margin-top: $header-height;
+        box-shadow: 0 1px 0 0 $line-color;
+        
+    }
+    
+    .profile {
+        display: flex;
+        // justify-content: space-between;
+        &__row {
+            width: 100%
+        }
+
+        &__details {
+            @include flexStyle;
+            flex-direction: column;
+            justify-content: center;
+            @include widthHeight(100%);
+
+            &__hello {
+                margin: 0;
+                @include textStyle($text-on-light-theme, 400, 24px);
+            }
+            &__fullname {
+                margin-bottom: 0px;
+                @include textStyle($highlight-color, 700, 72px);
+                text-transform: capitalize;
+            }
+            &__role {
+                @include textStyle($text-on-light-theme, 600, 20px);
+            }
+        }
+
+        &__picture {
+            @include widthHeight(380px);
+            border-radius: 50%;
+            overflow: hidden;
+            // margin-top: 15px;
+            box-shadow: 0 1px 0 0 $bg-dark;
+            img {
+                @include widthHeight(100%);
+            }
+        }
+    }
+}
+

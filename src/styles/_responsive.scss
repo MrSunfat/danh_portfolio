@@ -1,0 +1,98 @@
+@import './variable';
+@import './mixin';
+
+/* tablet */
+@media only screen and (min-width: 717px) and (max-width: 1085px) {
+    
+    /* Home */
+    .home-on-tablet {
+        
+        .header__options {
+            display: none;
+        }
+
+        .profile__details__fullname {
+            text-align: center;
+        }
+
+        .profile__picture {
+            @include widthHeight(220px);
+        }
+    }
+
+    .project-on-tablet {
+        .projects__main__item {
+            .item__img {
+                height: 180px;
+            }
+        } 
+    }
+}
+
+@media only screen and (max-width: 716px) {
+    
+    /* Home */
+    .home-on-mobile {
+        
+        .header__options {
+            display: none;
+        }
+
+        .profile__details__fullname {
+            text-align: center;
+        }
+
+        .profile__picture {
+            @include widthHeight(220px);
+        }
+    }
+
+    .project-on-mobile {
+        .projects__main__items {
+            flex-direction: column;
+            
+            .projects__main__item {
+                margin-left: 0;
+                margin-right: 0;
+                .item__img {
+                    height: 210px;
+                }
+            }
+
+            .projects__main__item + .projects__main__item {
+                margin-top: 22px;
+            }
+        }
+    }
+
+    .about-on-mobile {
+        .about__row {
+            padding-left: 2px;
+            padding-right: 2px;
+        }
+        .skill {
+            // flex-direction: column;
+            // justify-content: center;
+            flex-wrap: wrap;
+            line-height: 1.1;
+            padding: 2px 0;
+            &__icon {
+                margin-right: 4px;
+                font-size: 12px;
+            }
+            &__desc {
+                // font-size: 15px;
+                // overflow-wrap: break-word;
+                word-wrap: break-word;
+            }
+        }
+    }
+
+    .contact-on-mobile {
+        .contact__info {
+            &__list {
+                flex-direction: column;
+            }
+        }
+    }
+}
