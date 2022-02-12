@@ -10,6 +10,7 @@ const AppProvider = ({ children }) => {
         'Nắm vững các kiến thức và biết dùng JS/ES6+ và DOM',
         'Biết sử dụng cơ bản JS Framework như: ReactJS',
         'Nắm vững kĩ năng tạo ra Mock API, và tương tác với REST APIs',
+        'Sử dụng cơ bản được Git/Github',
     ]
     const projects = [
         {
