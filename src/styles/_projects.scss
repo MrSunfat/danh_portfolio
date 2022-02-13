@@ -1,10 +1,6 @@
 @import './variable';
 @import './mixin';
 
-.projects-container {
-
-}
-
 .projects {
     &__main {
         // flex-direction: row;
@@ -30,6 +26,11 @@
                 border: 1px solid $line-color;
                 border-radius: 5px;
                 overflow: hidden
+            }
+
+            .item__img:hover img {
+                transform: scale(1.25);
+                transition: transform 1.2s;
             }
 
             .item__name {

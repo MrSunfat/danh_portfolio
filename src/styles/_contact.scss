@@ -20,5 +20,9 @@
             }
         }
         box-shadow: 0 1px 0 0 $line-color;
+        &:hover .icon {
+            transform: rotate(35deg);
+            transition: transform 1.2s;
+        }
     }
 }

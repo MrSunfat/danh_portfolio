@@ -22,10 +22,6 @@
             
             border-radius: 8px;
             overflow: hidden;
-
-            .about__col {
-                
-            }
         }
 
         &__heading {
@@ -52,7 +48,7 @@
     &__cv {
         margin-top: $margin-top-item-of-about;
         .cv-btn {
-            @include textStyle($main-bg-color, 500, 17px);
+            @include textStyle($highlight-color, 700, 20px);
             border: 2px solid $main-bg-color;
             background-color: $bg-light;
         }

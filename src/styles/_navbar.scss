@@ -42,6 +42,7 @@
         .bar__item:hover .bar__item__link {
             color: $text-color;
             background-color: $highlight-color;
+            transition: all 1.2s;
         }
     }
 }

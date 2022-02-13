@@ -3,7 +3,8 @@ import { useGlobalContext } from '../../context';
 import ProjectItem from './ProjectItem';
 
 function Projects() {
-    const { projects } = useGlobalContext();
+    const { info } = useGlobalContext();
+    const { projects } = info;
 
     return (
         <div

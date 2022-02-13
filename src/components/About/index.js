@@ -3,7 +3,8 @@ import { useGlobalContext } from '../../context';
 import Skill from './Skill';
 
 function About() {
-    const { role, skills } = useGlobalContext();
+    const { info } = useGlobalContext();
+    const { role, skills } = info;
 
     return (
         <div id="about" className="about-container option-container padding40 about-on-mobile">
