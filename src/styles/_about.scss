@@ -1,6 +1,10 @@
 @import './variable';
 @import './mixin';
 
+.about-container {
+    // @include gradientBg;
+}
+
 .about {
     /* heading */
     // &__heading {
@@ -19,7 +23,7 @@
         
         .about__row {
             padding: $pad-or-margin-title 20px;
-            
+            text-shadow: 0 0 1px $main-bg-color;
             border-radius: 8px;
             overflow: hidden;
         }

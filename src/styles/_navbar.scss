@@ -7,10 +7,10 @@
     top: calc(50% + -70px);
     /* left: 0; */
     width: $width-bar;
-    right: $off-bar;
+    right: ($off-bar - $shadow-bar);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    box-shadow: 0 0 12px $crollbar-color;
+    box-shadow: 0 0 $shadow-bar  $crollbar-color;
     overflow: hidden;
 
     &__list {

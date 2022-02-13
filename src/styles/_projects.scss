@@ -1,6 +1,10 @@
 @import './variable';
 @import './mixin';
 
+.projects-container {
+    @include gradientBg;
+}
+
 .projects {
     &__main {
         // flex-direction: row;

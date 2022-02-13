@@ -1,3 +1,29 @@
+@mixin gradientText {
+    background: -webkit-linear-gradient($crollbar-color, $main-bg-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin gradientBg {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        45deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(245, 138, 7, 1) 0%,
+        rgba(171, 167, 236, 1) 100%
+    );
+}
+
+@mixin radioGradientBg {
+    background: rgb(2, 0, 36);
+    background: radial-gradient(
+        circle,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(245, 138, 7, 1) 0%,
+        rgba(68, 61, 175, 1) 100%
+    );
+}
+
 @mixin textStyle($color, $font-weight, $font-size) {
     color: $color;
     font-size: $font-size;

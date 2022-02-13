@@ -4,7 +4,7 @@
 .home-container {
     // @include flexStyle;
     // flex-direction: column;
-    
+
     /* Header */
     .header-container {
         position: fixed;
@@ -19,11 +19,11 @@
         @include flexStyle;
         height: $header-height;
         justify-content: space-around;
-        
-        &__navbar {
-            // width: 100%;
-        }
-    
+
+        // &__navbar {
+        //     // width: 100%;
+        // }
+
         &__logo {
             a {
                 @include flexStyle;
@@ -38,10 +38,10 @@
             @include flexStyle;
             justify-content: space-between;
             align-items: center;
-            
+
             .header__option {
                 height: 100%;
-                
+
                 a {
                     @include aStyle(17px, 600, $text-color);
                     padding: 0 25px;
@@ -58,14 +58,14 @@
     .profile-container {
         margin-top: $header-height;
         box-shadow: 0 1px 0 0 $line-color;
-        
+        @include gradientBg;
     }
-    
+
     .profile {
         display: flex;
         // justify-content: space-between;
         &__row {
-            width: 100%
+            width: 100%;
         }
 
         &__details {
@@ -77,14 +77,17 @@
             &__hello {
                 margin: 0;
                 @include textStyle($text-on-light-theme, 400, 24px);
+                text-shadow: 0 0 1px $main-bg-color;
             }
             &__fullname {
                 margin-bottom: 0px;
-                @include textStyle($highlight-color, 700, 72px);
+                @include textStyle($text-color, 700, 72px);
+                text-shadow: 0 0 1px $main-bg-color;
                 text-transform: capitalize;
             }
             &__role {
-                @include textStyle($text-on-light-theme, 600, 20px);
+                @include textStyle($tag-text-color, 600, 20px);
+                @include gradientText;
             }
         }
 
@@ -101,3 +104,34 @@
     }
 }
 
+.typewritter .profile__details__role {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.15em; /* Adjust as needed */
+    animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 275px;
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: $line-color;
+    }
+}
