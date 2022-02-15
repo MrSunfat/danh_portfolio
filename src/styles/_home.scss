@@ -12,9 +12,11 @@
         top: 0;
         color: $text-color;
         width: 100%;
-        background-color: $main-bg-color;
+        // background-color: $main-bg-color;
+        // opacity: 0.95;
         z-index: 2;
-        opacity: 0.95;
+        backdrop-filter: blur(12px);
+        background-color: rgba($color: $main-bg-color, $alpha: 0.88)
     }
 
     .header {
