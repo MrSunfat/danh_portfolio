@@ -33,15 +33,11 @@ const AppProvider = ({ children }) => {
 
     }
 
-    const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+    const [isBarOpen, setIsBarOpen] = useState(false);
     const [option, setOption] = useState('');
 
-    const openNavbar = () => {
-        setIsNavbarOpen(true);
-    }
-
-    const closeNavbar = () => {
-        setIsNavbarOpen(false);
+    const toggleBar = () => {
+        setIsBarOpen(!isBarOpen);
     }
 
     const selectOption = (option) => {
@@ -50,10 +46,9 @@ const AppProvider = ({ children }) => {
 
     const value = {
         info,
-        isNavbarOpen,
+        isBarOpen,
         option,
-        openNavbar,
-        closeNavbar,
+        toggleBar,
         selectOption,
     };
 

@@ -73,11 +73,10 @@
         .skill {
             // flex-direction: column;
             // justify-content: center;
-            flex-wrap: wrap;
             line-height: 1.1;
             padding: 2px 0;
             &__icon {
-                margin-right: 4px;
+                margin-right: 3px;
                 font-size: 12px;
             }
             &__desc {

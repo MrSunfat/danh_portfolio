@@ -5,7 +5,7 @@ function Skill({ children }) {
     return (
         <li className="skill">
             <BsFillCheckCircleFill className="skill__icon" />
-            <div className="skill__desc">{children}</div>
+            <span className="skill__desc">{children}</span>
         </li>
     );
 }

@@ -44,6 +44,7 @@
                 &__icon {
                     color: $main-bg-color;
                     margin-right: $margin-right-of-icon;
+                    min-width: 20px;
                 }
             }
         }

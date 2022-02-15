@@ -8,10 +8,18 @@
     /* left: 0; */
     width: $width-bar;
     right: ($off-bar - $shadow-bar);
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 15px;
     box-shadow: 0 0 $shadow-bar  $crollbar-color;
     overflow: hidden;
+    transition: all 0.85s ease-out;
+
+    &__icon {
+        position: relative;
+        transform: translate(calc(50% + 12px), calc(50% + -7px));
+        color: #fff;
+        font-size: 20px;
+    }
 
     &__list {
         display: flex;
@@ -46,3 +54,15 @@
         }
     }
 }
+
+.bar.notActive {
+    border-radius: 16px;
+    margin-right: 3px;
+    @include widthHeight(50px);
+}
+.bar.notActive {
+    .bar__icon {
+        transform: translate(calc(50% + -3px), calc(50% + -3px));
+        font-size: 28px;
+    }
+} 
